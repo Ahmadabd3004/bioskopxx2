@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="coba">HELO</p>
+
+    <script>
+        const param = new URLSearchParams(location.search)
+        let username = param.get('text')
+        let coba = document.getElementById('coba')
+        coba.innerText +=" " + username
+        console.log(param.get('text'))
+        console.log(param.get('password'))
+    </script>
+</body>
+</html>
