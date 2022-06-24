@@ -76,14 +76,14 @@ function kurang(e) {
     if (jmlTiket !== 0) {
         jmlTiket--
         tiket.innerText = jmlTiket
-        let totalHarga = Number(hargaAsli) * jmlTiket
+        let totalHarga = harga * jmlTiket
         harga.innerText = totalHarga
     }
 }
 function tambah(e) {
     jmlTiket++
     tiket.innerText = jmlTiket
-    let totalHarga = Number(hargaAsli) * jmlTiket
+    let totalHarga = harga * jmlTiket
     harga.innerText = totalHarga
 }
 
