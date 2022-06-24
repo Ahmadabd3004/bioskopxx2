@@ -32,3 +32,7 @@ function tambah(e){
         let totalHarga = Number(hargaAsli) * jmlTiket
         harga.innerText = totalHarga
 }
+
+function ambilHarga(){
+    
+}
