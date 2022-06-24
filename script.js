@@ -1,7 +1,7 @@
 const param = new URLSearchParams(location.search)
 let username = param.get('text')
 let coba = document.getElementById('coba')
-// coba.innerText +=" " + username
+coba.innerText +=" " + username;
 const db = [
     {
         namaFilm: "Naruto",
