@@ -1,7 +1,7 @@
 const param = new URLSearchParams(location.search)
 let username = param.get('text')
 let coba = document.getElementById('coba')
-coba.innerText +=" " + username
+// coba.innerText +=" " + username
 const db = [
     {
         namaFilm: "Naruto",
@@ -26,6 +26,26 @@ const db = [
     {
         namaFilm: "Gundala",
         gambar: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F4c%2Fe1%2F27%2F4ce127707ff5fcb973f4b0ca59bc86b3.jpg&f=1&nofb=1",
+        sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
+    },
+    {
+        namaFilm: "Tukang Bubur Naik Haji",
+        gambar: "http://4.bp.blogspot.com/-wMKxBO71THg/T8D4Gq_8ReI/AAAAAAAAAvw/ncGEpYt7sr8/s1600/306205_299900656769617_100002490550148_628171_689063235_n.jpg",
+        sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
+    },
+    {
+        namaFilm: "Super Hero Squad",
+        gambar: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3CdaaPZdU1Xv2c6hDaSVWhsXtuO.jpg",
+        sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
+    },
+    {
+        namaFilm: "IT",
+        gambar: "https://www.theglobaldispatch.com/wp-content/uploads/2016/06/It-remake-movie-poster-2017.jpg",
+        sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
+    },
+    {
+        namaFilm: "Tendangan Si Madun",
+        gambar: "https://media.suara.com/pictures/original/2018/12/08/55441-poster-sinetron-madun-is-back-mnctv.jpg",
         sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
     }
 ]
@@ -99,7 +119,6 @@ for (let i = 0; i < db.length; i++) {
 
     const img = document.createElement("img");
     img.src = gambar;
-    img.classList = "card-image";
     div.appendChild(img);
     container.appendChild(div);
 
@@ -115,5 +134,8 @@ for (let i = 0; i < db.length; i++) {
 
         const text = document.getElementById("sinopsis");
         text.innerText = sinopsis;
+
+        const jmhTiket = document.getElementById("jmlTiket");
+        jmhTiket.innerText = 0;
     });
 }
