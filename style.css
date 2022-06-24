@@ -1,13 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    /* opacity: 0.98; */
 }
 input {
     width: 400px;
     height: 50px;
     border-radius: 1em;
+    border: none;
 }
 label {
     display: block;
@@ -20,14 +35,25 @@ label {
 }
 .card {
     height: 500px;
-    border-radius: 1em;
-    padding: 0 20px;
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: #655A5A;
+    opacity: 0.80;
+    color: white;
+    border: none;
 }
 .btn-round {
     margin-top: 10px;
-    border-radius: 99999999px;
+    border-radius: 20px;
 }
 .card-title {
     margin-bottom: 50px;
     font-size: 50px;
+}
+.btn {
+    padding: 8px 12px;
+    width: 100%;
+    border: none;
+    background-color: red;
+    color: white;
 }

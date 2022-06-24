@@ -1,7 +1,7 @@
-// const param = new URLSearchParams(location.search)
-// let username = param.get('text')
-// let coba = document.getElementById('coba')
-// coba.innerText +=" " + username
+const param = new URLSearchParams(location.search)
+let username = param.get('text')
+let coba = document.getElementById('coba')
+coba.innerText +=" " + username
 
 let sidebar = document.getElementById('sidebar')
 let tiket = document.getElementById('jmlTiket')
