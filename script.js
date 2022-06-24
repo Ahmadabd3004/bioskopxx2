@@ -1,7 +1,7 @@
-// const param = new URLSearchParams(location.search)
-// let username = param.get('text')
-// let coba = document.getElementById('coba')
-// coba.innerText +=" " + username
+const param = new URLSearchParams(location.search)
+let username = param.get('text')
+let coba = document.getElementById('coba')
+coba.innerText +=" " + username
 const db = [
     {
         namaFilm: "Naruto",
@@ -29,6 +29,7 @@ const db = [
         sinopsis: "menceritakan tentang kehidupan seseorang bernama Sancaka (Abimana Aryasatya) untuk bertahan hidup ditengah kehidupannya yang begitu berat pasca ditinggal oleh orang tuanya."
     }
 ]
+
 
 let cart = []
 let sidebar = document.getElementById('sidebar')

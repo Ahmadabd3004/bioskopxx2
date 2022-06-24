@@ -10,19 +10,19 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="container">
-        <img src="bg3.jpg" class="img" alt="">
-        <div class="banner">
-            <h1>WELCOME</h1>
-            <h1>AHMAD</h1>
-        </div>
-        <div class="card-container">
-        </div>
+<body style="display: flex; flex-direction: column">
+
+  <div class="container">
+    <img src="bg3.jpg" class="img" alt="">
+    <div class="banner">
+        <h1>WELCOME</h1>
+        <h1 id="coba"></h1>
     </div>
-    <div class="container">
-        <div id="container-cart" style = "color: white"></div>
+  
+    <div class="card-container">
+        
     </div>
+    
     <div class="sidebar" id="sidebar">
         <div class="sidebar-container">
             <h1 id="judul"></h1>
@@ -39,6 +39,10 @@
             <button class="btn-dismiss" type ="button" onclick="toggleFunction()">dismiss</button>
         </div>
     </div>
+</div>
+<div>
+    <div id="container-cart" style = "color: white"></div>
+</div>
     
     <script src="./script.js"></script>
 </body>
