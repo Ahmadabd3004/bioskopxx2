@@ -3,13 +3,15 @@
 // let coba = document.getElementById('coba')
 // coba.innerText +=" " + username
 
+let cart = []
 let sidebar = document.getElementById('sidebar')
 let tiket = document.getElementById('jmlTiket')
-let harga = document.getElementById('harga')
-const hargaAsli = Number(harga.innerText)
+let harga = 50000
+let selectedNamaFilm = ''
 
 let jmlTiket = Number(tiket.innerHTML)
-function toggleFunction(e){
+function toggleFunction(namaFilm){
+    selectedNamaFilm = namaFilm
     let toggleItem = sidebar.classList.contains('active')
     if (!toggleItem) {
         sidebar.classList.add('active')
@@ -33,6 +35,19 @@ function tambah(e){
         harga.innerText = totalHarga
 }
 
-function ambilHarga(){
+function addCart(){
+    let totalqty = document.getElementById("jmlTiket").innerHTML
+    let totalHarga = totalqty * harga
+    cart.push({title: selectedNamaFilm, qty: totalqty})
+
+    document.getElementById('container-cart').innerHTML = ''
+    for(let i = 0 ; i < cart.length; i++){
+      document.getElementById('container-cart').innerHTML += `${cart[i].title} <br> ${cart[i].qty} <span> ${totalHarga}`
+    }
     
+}
+
+document.getElementById('container-cart').innerHTML = ''
+for(let i = 0 ; i < cart.length; i++){
+  document.getElementById('container-cart').innerHTML += `${cart[i].title} <br> ${cart[i].qty} <br>`
 }

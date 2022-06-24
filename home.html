@@ -18,7 +18,7 @@
             <h1>AHMAD</h1>
         </div>
         <div class="card-container">
-            <div class="card" onclick="toggleFunction()">
+            <div class="card" onclick="toggleFunction('Gatot kaca')">
                 <img src="gatot.jpg" alt="" class="card-image">
             </div>
             <div class="card">
@@ -34,6 +34,10 @@
                 <img src="gatot.jpg" alt="" class="card-image">
             </div>
         </div>
+        
+    </div>
+    <div class="container">
+        <div id="container-cart" style = "color: white"></div>
     </div>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-container">
@@ -49,12 +53,11 @@
                 <span id="jmlTiket">0</span>
                 <button onclick="tambah()">+</button>
             </div>
-            <h3>Rp <span id="harga">50000</span></h3>
-            <button class="btn-submit" onclick="ambilHarga()">add to cart</button>
-            <button class="btn-dismiss" onclick="toggleFunction()">dismiss</button>
+            <button class="btn-submit" type="button" onclick="addCart()">add to cart</button>
+            <button class="btn-dismiss" type ="button" onclick="toggleFunction()">dismiss</button>
         </div>
     </div>
-
+    
     <script src="./script.js"></script>
 </body>
 
