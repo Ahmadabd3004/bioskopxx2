@@ -90,7 +90,6 @@ function tambah(e) {
 function addCart() {
     let totalqty = document.getElementById("jmlTiket").innerHTML
     let totalHarga = 0
-    let totalFinal = 0
     cart.push({ title: selectedNamaFilm, qty: totalqty })
 
     document.getElementById('container-cart').innerHTML = ``
@@ -100,11 +99,9 @@ function addCart() {
         totalHarga = cart[i].qty * harga
         if (totalHarga !== 0) {
             document.getElementById('container-cart').innerHTML += ` <h3>${cart[i].title} - ${cart[i].qty}x (RP ${totalHarga})</h3>`
-            totalFinal += totalHarga
         }
 
     }
-    console.log(totalFinal)
     document.getElementById('sidebar').classList.remove('active')
 }
 
