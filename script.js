@@ -1,7 +1,7 @@
 const param = new URLSearchParams(location.search)
 let username = param.get('text')
 let coba = document.getElementById('coba')
-coba.innerText +=" " + username
+// coba.innerText +=" " + username
 const db = [
     {
         namaFilm: "Naruto",
@@ -66,7 +66,10 @@ function toggleFunction(namaFilm) {
         sidebar.classList.add('active')
     } else {
         sidebar.classList.remove('active')
+        
     }
+    tiket.innerText = 0
+    jmlTiket = 0
 }
 
 function kurang(e) {
@@ -89,15 +92,17 @@ function addCart() {
     let totalHarga = 0
     cart.push({ title: selectedNamaFilm, qty: totalqty })
 
-    document.getElementById('container-cart').innerHTML = ''
+    document.getElementById('container-cart').innerHTML = ``
+    document.getElementById('container-cart').innerHTML += ` <h1>Total Cart</h1>`
+
     for (let i = 0; i < cart.length; i++) {
         totalHarga = cart[i].qty * harga
         if (totalHarga !== 0) {
-            document.getElementById('container-cart').innerHTML += `${cart[i].title} <br> Jumlah Tiket: ${cart[i].qty} <span> Harga: ${totalHarga}</span>`
+            document.getElementById('container-cart').innerHTML += ` <h3>${cart[i].title} - ${cart[i].qty}x (RP ${totalHarga})</h3>`
         }
 
     }
-
+    document.getElementById('sidebar').classList.remove('active')
 }
 
 

@@ -147,3 +147,17 @@ body {
 #coba {
     text-transform: uppercase;
 }
+#container-cart {
+    /* width: 100%; */
+    padding: 20px 100px;
+    text-align: center;
+    background-color: rgba(33, 33, 33, 0.8);
+}
+#container-cart h1 {
+    margin-bottom: 10px;
+}
+#container-cart h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}

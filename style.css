@@ -23,9 +23,12 @@ input {
     height: 50px;
     border-radius: 1em;
     border: none;
+    padding: 0 20px;
+    font-size: 20px;
 }
 label {
     display: block;
+    font-size: 20px;
 }
 .input{
     display: block;
@@ -49,6 +52,7 @@ label {
 .card-title {
     margin-bottom: 50px;
     font-size: 50px;
+    text-align: center;
 }
 .btn {
     padding: 8px 12px;
