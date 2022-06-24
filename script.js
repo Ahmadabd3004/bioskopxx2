@@ -1,7 +1,7 @@
-// const param = new URLSearchParams(location.search)
-// let username = param.get('text')
-// let coba = document.getElementById('coba')
-// coba.innerText +=" " + username
+const param = new URLSearchParams(location.search)
+let username = param.get('text')
+let coba = document.getElementById('coba')
+coba.innerText +=" " + username
 const db = [
     {
         namaFilm: "Naruto",
@@ -50,22 +50,26 @@ const db = [
     }
 ]
 
+
+let cart = []
 let sidebar = document.getElementById('sidebar')
 let tiket = document.getElementById('jmlTiket')
-let harga = document.getElementById('harga')
-const hargaAsli = Number(harga.innerText)
+let harga = 50000
+let selectedNamaFilm = ''
 
 let jmlTiket = Number(tiket.innerHTML)
-function toggleFunction(){
+
+function toggleFunction(namaFilm) {
+    selectedNamaFilm = namaFilm
     let toggleItem = sidebar.classList.contains('active')
     if (!toggleItem) {
         sidebar.classList.add('active')
-    }else{
+    } else {
         sidebar.classList.remove('active')
     }
 }
 
-function kurang(e){
+function kurang(e) {
     if (jmlTiket !== 0) {
         jmlTiket--
         tiket.innerText = jmlTiket
@@ -73,22 +77,35 @@ function kurang(e){
         harga.innerText = totalHarga
     }
 }
-function tambah(e){
-        jmlTiket++
-        tiket.innerText = jmlTiket
-        let totalHarga = Number(hargaAsli) * jmlTiket
-        harga.innerText = totalHarga
+function tambah(e) {
+    jmlTiket++
+    tiket.innerText = jmlTiket
+    let totalHarga = Number(hargaAsli) * jmlTiket
+    harga.innerText = totalHarga
 }
 
-function ambilHarga(){
-    
+function addCart() {
+    let totalqty = document.getElementById("jmlTiket").innerHTML
+    let totalHarga = 0
+    cart.push({ title: selectedNamaFilm, qty: totalqty })
+
+    document.getElementById('container-cart').innerHTML = ''
+    for (let i = 0; i < cart.length; i++) {
+        totalHarga = cart[i].qty * harga
+        if (totalHarga !== 0) {
+            document.getElementById('container-cart').innerHTML += `${cart[i].title} <br> Jumlah Tiket: ${cart[i].qty} <span> Harga: ${totalHarga}</span>`
+        }
+
+    }
+
 }
+
 
 const container = document.querySelector(".card-container");
 for (let i = 0; i < db.length; i++) {
     const nama = db[i].namaFilm;
     const gambar = db[i].gambar;
-    const sinopsis = db [i].sinopsis;
+    const sinopsis = db[i].sinopsis;
     const div = document.createElement("div");
     div.classList = "card";
 
@@ -96,11 +113,11 @@ for (let i = 0; i < db.length; i++) {
     img.src = gambar;
     div.appendChild(img);
     container.appendChild(div);
-    
+
     const divKanan = document.getElementsByClassName("card");
 
     divKanan[i].addEventListener("click", function () {
-        toggleFunction();
+        toggleFunction(nama);
         const judul = document.getElementById("judul");
         judul.innerText = nama;
 

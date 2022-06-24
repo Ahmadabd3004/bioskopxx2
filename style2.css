@@ -31,7 +31,6 @@ body {
     display: block;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 .card-container {
     margin-top: 50px;
@@ -144,4 +143,7 @@ body {
     text-transform: uppercase;
     color: white;
     border-radius: 5em;
+}
+#coba {
+    text-transform: uppercase;
 }
