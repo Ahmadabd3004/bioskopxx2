@@ -93,7 +93,7 @@ function addCart() {
     cart.push({ title: selectedNamaFilm, qty: totalqty })
 
     document.getElementById('container-cart').innerHTML = ``
-    document.getElementById('container-cart').innerHTML += ` <h1>Total Cart</h1>`
+    document.getElementById('container-cart').innerHTML += ` <h1>List Cart</h1>`
 
     for (let i = 0; i < cart.length; i++) {
         totalHarga = cart[i].qty * harga
