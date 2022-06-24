@@ -13,27 +13,13 @@
 <body>
     <div class="container">
         <img src="bg3.jpg" class="img" alt="">
-        <div class="banner">
-            <h1>WELCOME</h1>
-            <h1>AHMAD</h1>
-        </div>
-        <div class="card-container">
-            <!-- <div class="card" onclick="toggleFunction()">
-                <img src="gatot.jpg" alt="" class="card-image">
+        <div class="content">
+            <div class="banner">
+                <h1>WELCOME</h1>
+                <h1>AHMAD</h1>
             </div>
-            <div class="card">
-                <img src="gatot.jpg" alt="" class="card-image">
+            <div class="card-container">
             </div>
-            <div class="card">
-                <img src="gatot.jpg" alt="" class="card-image">
-            </div>
-            <div class="card">
-                <img src="gatot.jpg" alt="" class="card-image">
-            </div>
-            <div class="card">
-                <img src="gatot.jpg" alt="" class="card-image">
-            </div> -->
-
         </div>
     </div>
     <div class="sidebar" id="sidebar">
@@ -42,15 +28,17 @@
             <div class="image-wrapper">
                 <img src="" alt="" class="card-image" id="side-image">
             </div>
-            <h3 id="sinopsis"></h3>
-            <div class="jumlah-tiket">
-                <button onclick="kurang()">-</button>
-                <span id="jmlTiket">0</span>
-                <button onclick="tambah()">+</button>
+            <h3 class="sinopsis" id="sinopsis"></h3>
+            <div class="fix">
+                <div class="jumlah-tiket">
+                    <button onclick="kurang()">-</button>
+                    <span id="jmlTiket">0</span>
+                    <button onclick="tambah()">+</button>
+                </div>
+                <h3>Rp <span id="harga">50000</span></h3>
+                <button class="btn-submit" onclick="ambilHarga()">add to cart</button>
+                <button class="btn-dismiss" onclick="toggleFunction()">dismiss</button>
             </div>
-            <h3>Rp <span id="harga">50000</span></h3>
-            <button class="btn-submit" onclick="ambilHarga()">add to cart</button>
-            <button class="btn-dismiss" onclick="toggleFunction()">dismiss</button>
         </div>
     </div>
 

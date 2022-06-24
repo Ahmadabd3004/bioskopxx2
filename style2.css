@@ -1,50 +1,60 @@
 * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+body {
+    overflow-x: hidden;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.container .img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.container img:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.content {
+    padding: 70px 40px 0;
 }
 .banner {
     font-size: 50px;
     display: block;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 165px;
-    padding-left: 147px;
-}
-.container {
-    /* background-color: aqua; */
-    height: 100vh;
-    width: 100vw;
+
 }
 .card-container {
     margin-top: 50px;
     display: flex;
-    margin-left: 147px;
-    /* background-color: aqua; */
-    height: 100px;
-    /* width: 100vw; */
+    flex-direction: row;
+    overflow: scroll;
+    width: 100%;
+}
+.card-container::-webkit-scrollbar {
+    display: none;
 }
 .card-container .card {
-    /* background-color: white; */
-    width: 246px;
-    height: 297px;
-    margin: 7px;
-    margin-right: 42px;
+    margin: 0 10px;
+    width: 25%;
+}
+.card img {
+    aspect-ratio: 3/4;
+    width: 15vw;
+    border-radius: 20px;
 }
 .card-title {
     display: block;
     color: white;
-}
-.img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    /* opacity: 0.98; */
-}
-.card-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
 }
 .sidebar {
     width: 30vw;
@@ -61,7 +71,7 @@
 }
 
 .sidebar-container {
-    padding: 100px 30px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,22 +81,43 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sidebar .image-wrapper{
-    width: 246px;
-    height: 297px;
-    background-color: pink;
+    width: 18vw;
+    margin: 20px 0 30px;
+}
+.card-image {
+    aspect-ratio: 3/4;
+    width: 100%;
     border-radius: 20px;
-    margin-bottom: 20px;
+}
+.sinopsis {
+    height: 10vh;
+    overflow: scroll;
+    
+}
+.sinopsis::-webkit-scrollbar {
+    display: none;
+}
+.fix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
 }
 .jumlah-tiket{
     margin:  20px 0;
 }
 .jumlah-tiket button {
+    font-weight: bold;
     width: 30px;
     height: 30px;
-    /* border: none; */
     border-radius: 30px;
-        background-color: rgb(222, 54, 54);;
-    }
+    background-color: rgb(222, 54, 54);;
+}
+.jumlah-tiket button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
 .jumlah-tiket span {
     margin: 0 5px
 }
@@ -99,6 +130,10 @@
     text-transform: uppercase;
     color: white;
     border-radius: 5em;
+}
+.btn-submit:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 .btn-dismiss{
     margin-top: 5px;
